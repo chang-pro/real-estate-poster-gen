@@ -3,9 +3,11 @@
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Repo](https://img.shields.io/badge/Source-Private-orange?style=flat-square)
+![Open Source](https://img.shields.io/badge/Open_Source-green?style=flat-square)
 
-**A web app that generates professional real estate marketing posters from property data.** Select from 10 unique design templates, enter property details, and instantly download print-ready posters.
+**A web app that generates professional real estate marketing posters instantly.** Enter property details, upload photos, and get 3 unique designs from 10 different templates. Download as PNG — ready for print or social media.
+
+**This project is open source — full code available in this repo.**
 
 ---
 
@@ -13,47 +15,43 @@
 
 1. **Enter property details** — headline, address, price
 2. **Upload photos** — via URL or file upload
-3. **Generate** — system randomly selects 3 templates and renders posters
+3. **Click generate** — system randomly selects 3 of 10 templates
 4. **Download** — export as high-quality PNG files
 
-## Templates
+No signup. No account. Just paste your property info and go.
 
-| # | Template | Style |
-|---|----------|-------|
-| 1 | Modern Gradient | Clean gradients with bold typography |
-| 2 | Classic Newspaper | Editorial, newspaper-inspired layout |
-| 3 | Minimalist | Whitespace-focused, elegant |
-| 4 | Luxury Gold | Premium gold accents, dark theme |
-| 5 | Tech Modern | Sleek, tech-forward design |
-| 6 | Vintage | Retro-inspired with warm tones |
-| 7 | Bold Typography | Statement type, minimal imagery |
-| 8 | Photo Collage | Multi-image grid layout |
-| 9 | Magazine | Editorial magazine cover style |
-| 10 | Neon Glow | Dark mode with neon accents |
+## What I Built
 
-## Features
+### Dynamic Template Engine
+The core of the app is a **placeholder-based rendering system**. Each template is a self-contained design with `{{placeholders}}` for property data. When you generate:
+1. Three templates are randomly selected (no two runs are identical)
+2. Placeholders (`{{headline}}`, `{{price}}`, `{{address}}`) are replaced with your data
+3. Uploaded images are injected into the template's image slots
+4. The result is rendered and ready for download
 
-- **Random Generation** — Get 3 unique designs per generation (no two runs identical)
-- **Template Placeholder System** — `{{placeholders}}` replaced dynamically with property data
-- **Flexible Image Input** — URLs or direct file uploads
-- **PNG Export** — High-quality downloads ready for print or digital use
-- **No Account Required** — Zero signup, instant use
+### 10 Unique Templates
+
+| # | Style | Design Approach |
+|---|-------|----------------|
+| 1 | **Modern Gradient** | Clean gradients, bold typography |
+| 2 | **Classic Newspaper** | Editorial, newspaper-inspired |
+| 3 | **Minimalist** | Whitespace-focused, elegant |
+| 4 | **Luxury Gold** | Premium dark theme with gold accents |
+| 5 | **Tech Modern** | Sleek, tech-forward |
+| 6 | **Vintage** | Retro warm tones |
+| 7 | **Bold Typography** | Statement type, minimal imagery |
+| 8 | **Photo Collage** | Multi-image grid layout |
+| 9 | **Magazine** | Editorial cover style |
+| 10 | **Neon Glow** | Dark mode with neon accents |
+
+### Client-Side PNG Export
+- Posters are rendered and exported entirely in the browser — no server-side processing needed
+- High-quality PNG output suitable for print and digital use
 
 ## Tech Stack
 
-- **Framework:** Next.js 15, React 19, TypeScript
-- **Rendering:** Dynamic template engine with placeholder replacement
-- **Export:** Client-side PNG generation
-- **Styling:** CSS-in-JS with template-specific styles
-
-## Skills Demonstrated
-
-- Dynamic template rendering system design
-- Image processing and export in the browser
-- UI/UX design across 10 distinct visual styles
-- Placeholder-based content injection architecture
-- Client-side file generation and download
+`Next.js 15` · `React 19` · `TypeScript` · `Tailwind CSS` · `Client-side rendering`
 
 ---
 
-> *This is a showcase page for a private repository. Source code available upon request for verified opportunities.*
+> *Open source — feel free to fork, contribute, or use it for your own real estate marketing.*
