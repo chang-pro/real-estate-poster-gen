@@ -1,123 +1,59 @@
-# Real Estate Poster Generator 🏡
+# Real Estate Poster Generator
 
-A Next.js application that generates stunning real estate posters by randomly selecting from 10 unique templates and replacing placeholders with your property data.
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Repo](https://img.shields.io/badge/Source-Private-orange?style=flat-square)
 
-## Features
+**A web app that generates professional real estate marketing posters from property data.** Select from 10 unique design templates, enter property details, and instantly download print-ready posters.
 
-- 🎨 **10 Unique Templates**: Modern Gradient, Classic Newspaper, Minimalist, Luxury Gold, Tech Modern, Vintage, Bold Typography, Photo Collage, Magazine, and Neon Glow
-- 🎲 **Random Generation**: Get 3 different random designs each time you click generate
-- 📸 **Flexible Image Input**: Use URLs or upload images directly
-- ⬇️ **High-Quality Downloads**: Download posters as PNG files
-- 🎯 **Simple & Fast**: No signup, no database, just pure poster generation
+---
 
 ## How It Works
 
-1. **Enter Property Details**
-   - Headline (e.g., "LUXURY WATERFRONT ESTATE")
-   - Address (e.g., "1821 Riverside Drive, Ormond Beach, FL")
-   - Price (e.g., "1,295,000")
+1. **Enter property details** — headline, address, price
+2. **Upload photos** — via URL or file upload
+3. **Generate** — system randomly selects 3 templates and renders posters
+4. **Download** — export as high-quality PNG files
 
-2. **Add Photos**
-   - Paste image URLs or upload files
-   - At least one photo required
+## Templates
 
-3. **Generate Posters**
-   - Click "Generate 3 Random Posters"
-   - System randomly selects 3 different templates
-   - Replaces `{{placeholders}}` with your data
-   - Displays all 3 posters instantly
+| # | Template | Style |
+|---|----------|-------|
+| 1 | Modern Gradient | Clean gradients with bold typography |
+| 2 | Classic Newspaper | Editorial, newspaper-inspired layout |
+| 3 | Minimalist | Whitespace-focused, elegant |
+| 4 | Luxury Gold | Premium gold accents, dark theme |
+| 5 | Tech Modern | Sleek, tech-forward design |
+| 6 | Vintage | Retro-inspired with warm tones |
+| 7 | Bold Typography | Statement type, minimal imagery |
+| 8 | Photo Collage | Multi-image grid layout |
+| 9 | Magazine | Editorial magazine cover style |
+| 10 | Neon Glow | Dark mode with neon accents |
 
-4. **Download & Regenerate**
-   - Download individual posters you like
-   - Click "Generate 3 Different Posters" for new random combinations
+## Features
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ installed
-- npm or yarn package manager
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <your-repo-url>
-cd RPGS
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Run the development server:
-```bash
-npm run dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-## Template Structure
-
-Each template is a TypeScript file with HTML and CSS:
-
-```typescript
-export const template1 = {
-  id: 'unique-id',
-  name: 'Template Name',
-  html: `
-    <div class="poster">
-      <style>
-        /* Your CSS here */
-      </style>
-      <!-- Your HTML with {{placeholders}} -->
-      <h1>{{headline}}</h1>
-      <img src="{{photo1}}" />
-      <div>${{price}}</div>
-      <div>{{address}}</div>
-    </div>
-  `
-};
-```
-
-## Available Placeholders
-
-- `{{headline}}` - Property headline/title
-- `{{address}}` - Property address
-- `{{price}}` - Property price
-- `{{photo1}}` - Primary photo
-- `{{photo2}}` - Secondary photo (optional)
-- `{{photo3}}` - Tertiary photo (optional)
-
-## Adding New Templates
-
-1. Create a new file in `/templates/` (e.g., `template11.ts`)
-2. Export a template object with unique ID, name, and HTML
-3. Import it in `/templates/index.ts`
-4. Add it to the `allTemplates` array
+- **Random Generation** — Get 3 unique designs per generation (no two runs identical)
+- **Template Placeholder System** — `{{placeholders}}` replaced dynamically with property data
+- **Flexible Image Input** — URLs or direct file uploads
+- **PNG Export** — High-quality downloads ready for print or digital use
+- **No Account Required** — Zero signup, instant use
 
 ## Tech Stack
 
-- **Next.js 14** - React framework
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling
-- **html2canvas** - Image generation for downloads
+- **Framework:** Next.js 15, React 19, TypeScript
+- **Rendering:** Dynamic template engine with placeholder replacement
+- **Export:** Client-side PNG generation
+- **Styling:** CSS-in-JS with template-specific styles
 
-## Build for Production
+## Skills Demonstrated
 
-```bash
-npm run build
-npm start
-```
+- Dynamic template rendering system design
+- Image processing and export in the browser
+- UI/UX design across 10 distinct visual styles
+- Placeholder-based content injection architecture
+- Client-side file generation and download
 
-## License
+---
 
-MIT
-
-## Contributing
-
-Feel free to add more templates! Each template should have a unique style and personality.
-
-
-
+> *This is a showcase page for a private repository. Source code available upon request for verified opportunities.*
